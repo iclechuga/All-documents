@@ -1,0 +1,23 @@
+Municipios
+
+(ya se tiene) los ajustes nuevos se muestren en el track de las participaciones
+
+revisión de pólizas de pago (daf genera póliza)
+
+(ya se tiene) Revisión de Speis (daf subirá sus SPEIs) (municipio subirá CFDI)
+
+(ya se tiene) sección preguntas donde contabilidad muestra lineamientos de requisitos para que municipio emita CFDI
+
+(ya se tiene) mensaje con municipios, (damop)
+
+municipio suba lo que contabilidad les solicite a los municipios a través de DAMOP
+
+Verónica pregunta si municipio pueda subir otros documentos como confirmaciones trimestrales
+
+(ya se tiene) los municipios renombren los cfdi antes de subirlo (nombre, fondo y mes) ó al momento que municipio suba sus cfdi aparezca un menú donde ellos eligen el fondo y el sistema renombre, (nombre cfdi, fondo, mes)
+
+(ya se tiene) que con el tiempo se tenga base de datos de por lo menos 2 años o más para auditorias
+
+(ya se tiene) que municipio no pueda cambiar las cuentas sin permiso y que se queden las cuentas como inactivas
+
+(aclaración) fondos descentralizados y fondos de seguridad no necesitan subir información.

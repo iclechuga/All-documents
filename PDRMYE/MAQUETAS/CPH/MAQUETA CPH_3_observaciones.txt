@@ -1,0 +1,13 @@
+(106) calculo mensual no primer calculo
+(106)se quito periodo mensual semestral del menu inicial de participaciones(esta descripcion estara en el calculo)
+(108)al volver a recalcular mensaje emergente esto es un recalculo, agregar comentario por que lo estas recalculando
+(114)agregar comentario en pagina de captura para el calculo y ese comentario agregar a la lista como detalles
+(111) se actualizaron la lista de calculos
+(239)isn (ajuste semestral, ajuste anual boton calculo)
+(253)icv agregar clave de municipio en plantilla donde cargaba (correspondiente a estado no inegi19001)
+(266-269)pantalla general 60 40 para todos y configuraciones
+(270)cambiar menus iniciales dejar ejercicio, mes y para seguridad monto de impuestos a derogaciones y juegos con apuestas
+(301) agregar monto impuesto IEJA
+(321 y 334)regla para sugerir a quien se le va a quitar o dar pesos en caso de que falte o sobre
+(334-342)no es año previo es "distribucion 2013" y año en curso nombrar como "distribucion"
+(ya se tiene) calendario opciones para agregar tareas, ejemplo tareas ciclicas, recurrente cada mes

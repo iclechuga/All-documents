@@ -1,0 +1,20 @@
+Ing Nestor revisara si se agregara bandejas adicional para oficios de respuesta con jose luis cantu perez
+Ing Nestor revisara agregar dibujo de firma autografa
+
+Observaciones
+
+(programacion interno)todos los usuarios deben estar registrados usuario y contraseña y firma electronica(ya se tiene)
+(11-12)numero de oficio binculado al documento para las busquedas, campo abierto para agregar comentarios
+(13)Cambiar concepto de "firmante y no firmante" por rol capturista
+(14-17)listado directorio de quien va a recibir los documentos que se pueden seleccionar con un listado
+(programacion interno)la busqueda de documentos debera contemplar el contenido del comentario
+(18)tomar en cuenta con "copia para" (ya se tiene)
+(todas las diapositivas)Agregar Area/puesto de la persona,
+(37)La bandeja del capturista y firmante sean por area
+(38)Los documentos vistos cambien a una bandeja historico "vistos"/ tambien por estatus
+(ya se tiene)cuandollegue oficio nuevo se notifique al funcionario un correo electronico
+(ya se tiene)no se guardaran las llaves electronicas en la plataforma
+
+enlace del video
+https://drive.google.com/file/d/1ImqhyyhvdFYt0Dji2QgdlCx0_ITjINUa/view?usp=sharing
+
