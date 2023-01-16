@@ -1,0 +1,2044 @@
+{
+	"info": {
+		"_postman_id": "fbdcb9e8-0454-4152-ba03-e34cf01d04fd",
+		"name": "Api_AdSisUs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21869290"
+	},
+	"item": [
+		{
+			"name": "token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pruebas.sistemas\",\r\n    \"password\":\"12345678\",\r\n    \"remember_me\":true\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/login",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pruebas@sistemas.com\",\r\n    \"password\":\"12345678\",\r\n    \"remember_me\":true\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/logout",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pruebas@sistemas.com\",\r\n    \"password\":\"12345678\",\r\n    \"remember_me\":true\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/user",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Adolfo angel\",\r\n    \"email\":\"pruebas@sistemas.com\",\r\n    \"password\":\"12345678\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/signup",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EVENTOS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiJiNWEzZmZjZGIxZmFlZTZmYzIyNTI3OWVkODVhZmVjYjZmM2VkNmQyNjRhYjQxZTQ5MDQ3YmFjZTNjYzUwMGNjZGU3OGMwM2I3MTg1OGU0NyIsImlhdCI6MTY2MDU3ODY3Ni4zNjYwMzEsIm5iZiI6MTY2MDU3ODY3Ni4zNjYwMzUsImV4cCI6MTY5MjExNDY3Ni4zMjk2MTMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.yGjV4peXwXqfZWLYrRe6WQHjKmU6iCpzAIllmMM5X4LjWFsbkwX8Wen_WqFKy8AtiOsew-7OB1amYdQeHDT-1BewiiJ6ZFgV5EM2kcMwcs4sspu0F2Eaz_s3so1emt-PB0MgKCQdKs5tN2nu8xJzEzZ6AG_r3lKX7scLxXULaXLkc8_BLY7SaAHYRC9SPpgYtC7massa__cUZsQIhGBcaU83QjrkaNIGOQxN_pyLnuap3Gzd97UPB9eReQTR3__-IcyA4plo9GSCL5FWNsJRe211ZWUM8gl2b6CzSKAW8AT6IpdxWD_F6QkRFUwj9tpqabjuaP3VIbse4RRqNJTnlmN605FW0S-v8OTXLvhvxivkQ0Ef2V7eIHfyRxcwB_w92YXtXNtRwsWAfDIix3LcD8S-nPH9VMWigtl-oXoTuuyZyVuZ_5MweL0gxiuNlPg-leYatUnMnEEBwu4tF6zGxi3Di2MsgKFqoHFl4kK5H2k-tsyAj8TJddcT0DU2bL_CD__Hg7z7u24cgByrYJ6xaZEW2I5ytRpcjv6Bvkc7HakdgelYvapgyyNeVYT79LvEkeiH1q0eTOwUTnXMchO8dJvnst_3h8qnaHwHt7vw6LK0mmXdwaRmwtG03lCOURGqta8q12dem_f-aWehRtqpk-xJujestpkOBRaYrGLlF9c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/eventos",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"eventos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEPARTAMENTOS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiJiNWEzZmZjZGIxZmFlZTZmYzIyNTI3OWVkODVhZmVjYjZmM2VkNmQyNjRhYjQxZTQ5MDQ3YmFjZTNjYzUwMGNjZGU3OGMwM2I3MTg1OGU0NyIsImlhdCI6MTY2MDU3ODY3Ni4zNjYwMzEsIm5iZiI6MTY2MDU3ODY3Ni4zNjYwMzUsImV4cCI6MTY5MjExNDY3Ni4zMjk2MTMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.yGjV4peXwXqfZWLYrRe6WQHjKmU6iCpzAIllmMM5X4LjWFsbkwX8Wen_WqFKy8AtiOsew-7OB1amYdQeHDT-1BewiiJ6ZFgV5EM2kcMwcs4sspu0F2Eaz_s3so1emt-PB0MgKCQdKs5tN2nu8xJzEzZ6AG_r3lKX7scLxXULaXLkc8_BLY7SaAHYRC9SPpgYtC7massa__cUZsQIhGBcaU83QjrkaNIGOQxN_pyLnuap3Gzd97UPB9eReQTR3__-IcyA4plo9GSCL5FWNsJRe211ZWUM8gl2b6CzSKAW8AT6IpdxWD_F6QkRFUwj9tpqabjuaP3VIbse4RRqNJTnlmN605FW0S-v8OTXLvhvxivkQ0Ef2V7eIHfyRxcwB_w92YXtXNtRwsWAfDIix3LcD8S-nPH9VMWigtl-oXoTuuyZyVuZ_5MweL0gxiuNlPg-leYatUnMnEEBwu4tF6zGxi3Di2MsgKFqoHFl4kK5H2k-tsyAj8TJddcT0DU2bL_CD__Hg7z7u24cgByrYJ6xaZEW2I5ytRpcjv6Bvkc7HakdgelYvapgyyNeVYT79LvEkeiH1q0eTOwUTnXMchO8dJvnst_3h8qnaHwHt7vw6LK0mmXdwaRmwtG03lCOURGqta8q12dem_f-aWehRtqpk-xJujestpkOBRaYrGLlF9c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CHID\":\"ca7ba317-18be-11ed-88a1-4439c48dbc99\",\r\n    \"NUMOPERACION\":4,\r\n    \"STRNOMBRECORTO\":\"tes\",\r\n    \"STRDESCRIPCION\":\"Tesoreria\",\r\n    \"STRRESPONSABLE\":\"ca7ba317-18be-11ed-88a1-4439c48dbc99\",\r\n    \"CHUSER\":\"ca7ba317-18be-11ed-88a1-4439c48dbc99\"\r\n}"
+				},
+				"url": {
+					"raw": "http://10.200.4.96:82/api/Api_Catalogos/departamentos",
+					"protocol": "http",
+					"host": [
+						"10",
+						"200",
+						"4",
+						"96"
+					],
+					"port": "82",
+					"path": [
+						"api",
+						"Api_Catalogos",
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MENUS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiJiNWEzZmZjZGIxZmFlZTZmYzIyNTI3OWVkODVhZmVjYjZmM2VkNmQyNjRhYjQxZTQ5MDQ3YmFjZTNjYzUwMGNjZGU3OGMwM2I3MTg1OGU0NyIsImlhdCI6MTY2MDU3ODY3Ni4zNjYwMzEsIm5iZiI6MTY2MDU3ODY3Ni4zNjYwMzUsImV4cCI6MTY5MjExNDY3Ni4zMjk2MTMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.yGjV4peXwXqfZWLYrRe6WQHjKmU6iCpzAIllmMM5X4LjWFsbkwX8Wen_WqFKy8AtiOsew-7OB1amYdQeHDT-1BewiiJ6ZFgV5EM2kcMwcs4sspu0F2Eaz_s3so1emt-PB0MgKCQdKs5tN2nu8xJzEzZ6AG_r3lKX7scLxXULaXLkc8_BLY7SaAHYRC9SPpgYtC7massa__cUZsQIhGBcaU83QjrkaNIGOQxN_pyLnuap3Gzd97UPB9eReQTR3__-IcyA4plo9GSCL5FWNsJRe211ZWUM8gl2b6CzSKAW8AT6IpdxWD_F6QkRFUwj9tpqabjuaP3VIbse4RRqNJTnlmN605FW0S-v8OTXLvhvxivkQ0Ef2V7eIHfyRxcwB_w92YXtXNtRwsWAfDIix3LcD8S-nPH9VMWigtl-oXoTuuyZyVuZ_5MweL0gxiuNlPg-leYatUnMnEEBwu4tF6zGxi3Di2MsgKFqoHFl4kK5H2k-tsyAj8TJddcT0DU2bL_CD__Hg7z7u24cgByrYJ6xaZEW2I5ytRpcjv6Bvkc7HakdgelYvapgyyNeVYT79LvEkeiH1q0eTOwUTnXMchO8dJvnst_3h8qnaHwHt7vw6LK0mmXdwaRmwtG03lCOURGqta8q12dem_f-aWehRtqpk-xJujestpkOBRaYrGLlF9c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CHID\":\"ca7ba317-18be-11ed-88a1-4439c48dbc99\",\r\n    \"NUMOPERACION\":4,\r\n    \"STRNOMBRE\":\"\",\r\n    \"STRDESCRIPCION\":\"\",\r\n    \"NUMMENUPADRE\":\"\",\r\n    \"NUMORDEN\":1,\r\n    \"STRPATH\":\"\",\r\n    \"STRICON\":\"\",\r\n    \"CHUSER\":\"ca7ba317-18be-11ed-88a1-4439c48dbc99\"\r\n}"
+				},
+				"url": {
+					"raw": "http://10.200.4.96:82/api/Api_Catalogos/menus",
+					"protocol": "http",
+					"host": [
+						"10",
+						"200",
+						"4",
+						"96"
+					],
+					"port": "82",
+					"path": [
+						"api",
+						"Api_Catalogos",
+						"menus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menusByIdUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiI2ODYyNWRiMGY4MGMwZjc1MGFmYjI2MGZkNDVlMDQ2ODAwY2JiYjZlYWQ1OWZiZmNmY2RhODlhZDk1Y2I3NjEyMTBiNmYzMTUwMDY4MGUzNSIsImlhdCI6MTY2MTI4OTgxNC43MTQyMywibmJmIjoxNjYxMjg5ODE0LjcxNDIzMywiZXhwIjoxNjkyODI1ODE0LjY5NTE1Nywic3ViIjoiMSIsInNjb3BlcyI6W119.aSGj68hMGo_aVEIrBa4GgvKlBigmwFinYN686PwojIjLz70bfiDjM9_babKxy2amK9EEIwRZYUxPd-ZUbT3kqEoYdfg2vfGS8WwR796-U42t_nlsDCIDj94MwO6GF9Op2txE_xgzfXQ6p0yfvbKKu2yQcmTyK898_E9JLAFjN6tEy5Gx0ZCPS_4leb3SEsrp-TTLj42HrJGrOOfdQi_bDfiHJUAlok8xfdoNWoq7wDsg8IoK78nShfxjofdLILr0njNHbt_-C1ibyf7V68U8-1vorCkTwt8XsT_GqoWrMG19l-ZiZQRB0aKyFabRki_yb1oe6L_6i4MibuRFEiMsAqX6WFZcFVaOS8wG8AoChjyUOZbbxynr1CylVG1lgN0aPs8_39s5-o-K0ursYZSnCvl53PP8Cr6erLYH1gOnIX4FWX_UXWVNlugRU8kQ2t-mBg2G9nFVxAtvmGH5VVLsUZkSjFBq4ODZyMUBAQakhCs199STUxDpCigMa3OSjltkGEtHcSmZWxBOi8y6bU_idZqfsQcS-S572UQGI3c1NlS-TigYBEB-1rlL9rvZBYh0C2wz1i5IYmd3u-KvfWEyhTWLWJRhmolxSRuqIs3Q1P-sN9d_EEDtxrs7hA9wWzK-HEHI78rkpxtsAxPhJJc2Zhyv5AkliXRlbXMZbCQOnI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CHID\":\"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/menusByIdUser",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"menusByIdUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menusByIdFather",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CHID\":\"'18bbd470-1cb1-11ed-88a1-4439c48dbc99'\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/menusByIdFather",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"menusByIdFather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UMAS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiJiNWEzZmZjZGIxZmFlZTZmYzIyNTI3OWVkODVhZmVjYjZmM2VkNmQyNjRhYjQxZTQ5MDQ3YmFjZTNjYzUwMGNjZGU3OGMwM2I3MTg1OGU0NyIsImlhdCI6MTY2MDU3ODY3Ni4zNjYwMzEsIm5iZiI6MTY2MDU3ODY3Ni4zNjYwMzUsImV4cCI6MTY5MjExNDY3Ni4zMjk2MTMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.yGjV4peXwXqfZWLYrRe6WQHjKmU6iCpzAIllmMM5X4LjWFsbkwX8Wen_WqFKy8AtiOsew-7OB1amYdQeHDT-1BewiiJ6ZFgV5EM2kcMwcs4sspu0F2Eaz_s3so1emt-PB0MgKCQdKs5tN2nu8xJzEzZ6AG_r3lKX7scLxXULaXLkc8_BLY7SaAHYRC9SPpgYtC7massa__cUZsQIhGBcaU83QjrkaNIGOQxN_pyLnuap3Gzd97UPB9eReQTR3__-IcyA4plo9GSCL5FWNsJRe211ZWUM8gl2b6CzSKAW8AT6IpdxWD_F6QkRFUwj9tpqabjuaP3VIbse4RRqNJTnlmN605FW0S-v8OTXLvhvxivkQ0Ef2V7eIHfyRxcwB_w92YXtXNtRwsWAfDIix3LcD8S-nPH9VMWigtl-oXoTuuyZyVuZ_5MweL0gxiuNlPg-leYatUnMnEEBwu4tF6zGxi3Di2MsgKFqoHFl4kK5H2k-tsyAj8TJddcT0DU2bL_CD__Hg7z7u24cgByrYJ6xaZEW2I5ytRpcjv6Bvkc7HakdgelYvapgyyNeVYT79LvEkeiH1q0eTOwUTnXMchO8dJvnst_3h8qnaHwHt7vw6LK0mmXdwaRmwtG03lCOURGqta8q12dem_f-aWehRtqpk-xJujestpkOBRaYrGLlF9c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CHID\":\"ca7ba317-18be-11ed-88a1-4439c48dbc99\",\r\n    \"NUMOPERACION\":4,\r\n    \"NUMANIO\":\"\",\r\n    \"DECDIARIO\":\"\",\r\n    \"DECMENSUAL\":\"\",\r\n    \"DECANUAL\":1,\r\n    \"CHUSER\":\"ca7ba317-18be-11ed-88a1-4439c48dbc99\"\r\n}"
+				},
+				"url": {
+					"raw": "http://10.200.4.96:82/api/Api_Catalogos/umas",
+					"protocol": "http",
+					"host": [
+						"10",
+						"200",
+						"4",
+						"96"
+					],
+					"port": "82",
+					"path": [
+						"api",
+						"Api_Catalogos",
+						"umas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calendarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzE5N2Y3Mi04NmJjLTRmMjctYmUyZC1iNjQ3ZDdlNjQ1MzAiLCJqdGkiOiJmMTMyMWRhMDRmNTIyMmViMWUzNGJlYjBlMjBlNWNmMDM3NWUzN2JlOTlhMGEzMGE5YjRjOTAwOGRjNDA3ZDk3OWM1NGFiNzNiYWEwYjc5YSIsImlhdCI6MTY2MTQ0MzI5NS44OTQ0NTcsIm5iZiI6MTY2MTQ0MzI5NS44OTQ0NjIsImV4cCI6MTY5Mjk3OTI5NS43OTA5NDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.oS0G0TdYa_rHt_Qv5Sbi1uv4-BRFc23EpPuHFyS0Qcmnci7_jyL3le-RNL6zqk_j3jxPFaS7wJ4wyxD_cNhnk55g8nG-f4Gs7XAvfxIqIPTfVpDb_4yp0stQy4ozw2SCcb95kO2xYfradz6iw221rb4eDrdKWQ3W4FtKcVlHKlBOgXoElTcFxd1UZSvk9HnBYEcQW-1rzHP2odhQxBk_ry1dxVzQlLCxoypcIQS-b2hSJ2Tik1SYIC4nbnAAgCLA_G3NlvQYRImg06s4oxmhAzrq4J_bmDqkPhZMYxo401zE9Jc4Jb9r99ZhJSLgnRaqG02iDRnHDIosdqiW0zG2l0SOcvJTxmG4Y_a3E67eKwsf1dxqKL-tJ2jhR6BeasWgdBiv8B0MVvVLOVlwgJuwXOUH1OIvj4N0H-CtSXWuaFm7Y2ZR5JCiQUMZuZCdpLHVZ7e0j2sJqSm10MtX_L3-Glgv9mOiOtYAinDq7DMvzXmy9YL_tNYKzVYglsEZjokq94Bhvfcor2YWXvF8kLUR6PysxSWND1HAWAzmAOCdcs0fhUx-ofSPvKXIMjX-LllcqkOl_DqO-y9qRvkc6Ahio9CKYMe6E4WqN05GCuCA6FhoC9V3YDRahonHixHj8lsGvc6ux9obH55qMUY5lGkgqnOA2UE8tBx13YmejYsyVas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CHID\":\"282a41c8-18c3-11ed-88a1-4439c48dbc99\",\r\n    \"NUMOPERACION\":4,\r\n    \"STRNOMBREEVENTO\":\"\",\r\n    \"DATEINICIOEVENTO\":\"\",\r\n    \"DATEFINEVENTO\":\"\",\r\n    \"CHUSER\":\"1\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/calendarios",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"calendarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TasaInteres Plural",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/tasainteresplural",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"tasainteresplural"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TasaInteres Singular",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/tasainteressingular",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"tasainteressingular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTasainteres",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/getTasainteres",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"getTasainteres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalogo de conceptos de Ajustes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiJkMjEwNzA1ZTc3MTVmNWU2MTg2OTY0ZDM3YmY3OThlMzQyZWUwZGY0ZjI0MDRmZDkzMzk2ODBmMjU3YjBhZDc4MTJmM2I1M2FlYzBmNGYyMCIsImlhdCI6MTY2MTI2NDkxOC42OTA5MzEsIm5iZiI6MTY2MTI2NDkxOC42OTA5MzYsImV4cCI6MTY5MjgwMDkxOC41Mjk5MTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.oR9ud1mjZITc9lRTtpqmrSK696-JcVJ006EF6ohxrZjtnQGJunkjurCDc21zQbFU9qTykq4FwElkPYlaOcfcO-Jj3qFNLCRCHFqDgdD_jX3j-fMVtgS4MCQJ33AZyZMtMjGaKeKhW9Q8EAsGI5pWDMD2X16mq_CWIXc-78wrbGQFLMebOFpas53EZvci5fQkOM84CYZGLfuYMQcffaLub-xUGlWvfyL6MDp5as-rqfRBAVdEeGeYmQkDunStXYBkJxGPxYIAtuGwN-yyod_YAOSUBczU3jCLexSdchpcBA_EBXguy_jRskhdhCSW0ScRy4m1kLnWojvzuomcil4z-xMLPrIqRz3VLKEKzueKyhL7LftRhJSGLEvr5W08BqF4OoTeAegY0_frpfIULMz5s2Np251cmlg8YspabGvlGmPyBtQDX8Y1Gvl293H8csl_M8d-DWnYiGWewPjKFUNgNKU8pkOddqUX-5ND8uYdqH-3jPEviUv5J7ihUkystfN6D1zuAH0m2ld_pSUnx2jZ-mkUElUir8fGT3KwKsGyVvhR-YdYPxUFRg6ZbJkjFUimSrCsNXS7JL51WfZMs4TeJRNBmoxJKTmenG8fwG26lBMC4QGcGCwhP8LrAMbkbU5m-nGOuqo6XhaKBIalLA5ghOkSx6IDa19bVxAcbXOP0KQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NUMOPERACION\":4,\r\n    \"CHID\":\"\",\r\n    \"DESCRIPCION\":\"Primer Ajuste\",\r\n    \"MODIFICADOPOR\":1,\r\n    \"CREADOPOR\":1,\r\n    \"DELETED\":\"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/AjustesIndex",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"AjustesIndex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notificaciones",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzE5N2Y3Mi04NmJjLTRmMjctYmUyZC1iNjQ3ZDdlNjQ1MzAiLCJqdGkiOiJmMTMyMWRhMDRmNTIyMmViMWUzNGJlYjBlMjBlNWNmMDM3NWUzN2JlOTlhMGEzMGE5YjRjOTAwOGRjNDA3ZDk3OWM1NGFiNzNiYWEwYjc5YSIsImlhdCI6MTY2MTQ0MzI5NS44OTQ0NTcsIm5iZiI6MTY2MTQ0MzI5NS44OTQ0NjIsImV4cCI6MTY5Mjk3OTI5NS43OTA5NDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.oS0G0TdYa_rHt_Qv5Sbi1uv4-BRFc23EpPuHFyS0Qcmnci7_jyL3le-RNL6zqk_j3jxPFaS7wJ4wyxD_cNhnk55g8nG-f4Gs7XAvfxIqIPTfVpDb_4yp0stQy4ozw2SCcb95kO2xYfradz6iw221rb4eDrdKWQ3W4FtKcVlHKlBOgXoElTcFxd1UZSvk9HnBYEcQW-1rzHP2odhQxBk_ry1dxVzQlLCxoypcIQS-b2hSJ2Tik1SYIC4nbnAAgCLA_G3NlvQYRImg06s4oxmhAzrq4J_bmDqkPhZMYxo401zE9Jc4Jb9r99ZhJSLgnRaqG02iDRnHDIosdqiW0zG2l0SOcvJTxmG4Y_a3E67eKwsf1dxqKL-tJ2jhR6BeasWgdBiv8B0MVvVLOVlwgJuwXOUH1OIvj4N0H-CtSXWuaFm7Y2ZR5JCiQUMZuZCdpLHVZ7e0j2sJqSm10MtX_L3-Glgv9mOiOtYAinDq7DMvzXmy9YL_tNYKzVYglsEZjokq94Bhvfcor2YWXvF8kLUR6PysxSWND1HAWAzmAOCdcs0fhUx-ofSPvKXIMjX-LllcqkOl_DqO-y9qRvkc6Ahio9CKYMe6E4WqN05GCuCA6FhoC9V3YDRahonHixHj8lsGvc6ux9obH55qMUY5lGkgqnOA2UE8tBx13YmejYsyVas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NUMOPERACION\":5,\r\n    \"CHID\":\"\",\r\n    \"DESCRIPCION\":\"Primer Ajuste\",\r\n    \"DESTINATARIO\":\"\",\r\n    \"MODIFICADOPOR\":1,\r\n    \"CREADOPOR\":1,\r\n    \"DELETED\":\"\",\r\n    \"CHUSER\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/notificaciones",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"notificaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notificaciones Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \r\n    \"NUMOPERACION\":4,\r\n   \r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/AjustesIndex",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"AjustesIndex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "migraData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "inputfile",
+							"type": "file",
+							"src": "/C:/Users/Infinite/Documents/COMPARTIDA/PLANTILLAS_MIGRACION/MUNICIPIO_POBREZA_MODERADA.xlsx"
+						},
+						{
+							"key": "tipo",
+							"value": "MunPoblacionMod",
+							"type": "text"
+						},
+						{
+							"key": "calculo",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/migraData",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"migraData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trazabilidad",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CHID\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/trazabilidad",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"trazabilidad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALPRINCIPAL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"NUMOPERACION\":2,\r\n    \"CHID\":\"1\",\r\n    \"TIPO\":\"PARTICIPACION\",\r\n    \"IDESTATUS\":\"56011a43-182b-11ed-8346-5254008e6397\",\r\n    \"CLAVEFONDO\":\"ICV\",\r\n    \"ANIO\":2022,\r\n    \"MES\":1,\r\n    \"CHUSER\":1\r\n\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/CalIndex",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"CalIndex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInfoCalculo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"IDCALCULO\":\"1\",\r\n    \"FONDO\":\"ICV\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/getInfoCalculo",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"getInfoCalculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "munpoblacion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\",\r\n    \"CHID\":\"3ce376b1-0fbc-4783-92bf-6d63d01e298b\",\r\n    \"TOTALPOBLACION\":2973\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munpoblacion",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munpoblacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Municipios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\"\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munpoblacion",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munpoblacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "munfacturacion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\"\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munfacturacion",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munfacturacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "munpobrezamod",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\",\r\n    \"CHID\":\"\",\r\n    \"CHUSER\":\"\",\r\n    \"ANIO\":2022,\r\n    \"TOTAL\":0,\r\n    \"CARENCIAPROMEDIO\":0.0,\r\n    \"IDMUNICIPIO\":1\r\n\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munpobrezamod",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munpobrezamod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "munpobrezaext",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\",\r\n    \"CHID\":\"\",\r\n    \"CHUSER\":\"\",\r\n    \"ANIO\":2022,\r\n    \"TOTAL\":0,\r\n    \"CARENCIAPROMEDIO\":0.0,\r\n    \"IDMUNICIPIO\":1\r\n\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munpobrezaext",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munpobrezaext"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "munproyec",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\"\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munproyec",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munproyec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "munterritorio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\"\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munterritorio",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munterritorio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "munrecaudacion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\"\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/munrecaudacion",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"munrecaudacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "umas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"NUMOPERACION\":\"4\"\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/umas",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"umas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "avisos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "NUMOPERACION",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "CHUSER",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "NOMBRE",
+							"value": "seguros",
+							"type": "text"
+						},
+						{
+							"key": "DESCRIPCION",
+							"value": "comunicado de mes patrio",
+							"type": "text"
+						},
+						{
+							"key": "DOCUMENTO",
+							"type": "file",
+							"src": "/C:/Users/Infinite/Documents/COMPARTIDA/look&feel.pptx"
+						},
+						{
+							"key": "FECHAINICIO",
+							"value": "07/09/2022",
+							"type": "text"
+						},
+						{
+							"key": "FECHAFIN",
+							"value": "08/09/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/avisos",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"avisos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eventos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "NUMOPERACION",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "CHUSER",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "NOMBRE",
+							"value": "REACT",
+							"type": "text"
+						},
+						{
+							"key": "DESCRIPCION",
+							"value": "IMAGEN MES DE SEPTIEMBRE",
+							"type": "text"
+						},
+						{
+							"key": "IMAGEN",
+							"type": "file",
+							"src": "/C:/Users/Infinite/Pictures/fe/pdrmye/public/logo512.png"
+						},
+						{
+							"key": "FECHAINICIO",
+							"value": "07/09/2022",
+							"type": "text"
+						},
+						{
+							"key": "FECHAFIN",
+							"value": "08/09/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/eventos",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"eventos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articulof1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/articulof1",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"articulof1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articulof2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "NUMOPERACION",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "CHUSER",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "NOMBRE",
+							"value": "REACT",
+							"type": "text"
+						},
+						{
+							"key": "DESCRIPCION",
+							"value": "IMAGEN MES DE SEPTIEMBRE",
+							"type": "text"
+						},
+						{
+							"key": "IMAGEN",
+							"type": "file",
+							"src": "/C:/Users/Infinite/Pictures/fe/pdrmye/public/logo512.png"
+						},
+						{
+							"key": "FECHAINICIO",
+							"value": "07/09/2022",
+							"type": "text"
+						},
+						{
+							"key": "FECHAFIN",
+							"value": "08/09/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/articulof2",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"articulof2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "anios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "NUMOPERACION",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "CHUSER",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "NOMBRE",
+							"value": "REACT",
+							"type": "text"
+						},
+						{
+							"key": "DESCRIPCION",
+							"value": "IMAGEN MES DE SEPTIEMBRE",
+							"type": "text"
+						},
+						{
+							"key": "IMAGEN",
+							"type": "file",
+							"src": "/C:/Users/Infinite/Pictures/fe/pdrmye/public/logo512.png"
+						},
+						{
+							"key": "FECHAINICIO",
+							"value": "07/09/2022",
+							"type": "text"
+						},
+						{
+							"key": "FECHAFIN",
+							"value": "08/09/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/anios",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"anios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Meses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "NUMOPERACION",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "CHUSER",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "NOMBRE",
+							"value": "REACT",
+							"type": "text"
+						},
+						{
+							"key": "DESCRIPCION",
+							"value": "IMAGEN MES DE SEPTIEMBRE",
+							"type": "text"
+						},
+						{
+							"key": "IMAGEN",
+							"type": "file",
+							"src": "/C:/Users/Infinite/Pictures/fe/pdrmye/public/logo512.png"
+						},
+						{
+							"key": "FECHAINICIO",
+							"value": "07/09/2022",
+							"type": "text"
+						},
+						{
+							"key": "FECHAFIN",
+							"value": "08/09/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/anios",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"anios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filtroMunicipios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/Filtromunicipios",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"Filtromunicipios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "descargaplantilla",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NUMOPERACION\":\"MUNICIPIO_FACTURACION\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/descargaplantilla",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"descargaplantilla"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tipofondo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NUMOPERACION\":\"4\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/tipofondo",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"tipofondo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AjustesIndex",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NUMOPERACION\":\"4\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/AjustesIndex",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"AjustesIndex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USUARIO INFO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NzA3NTc4OS1mNzFjLTQzNGItYTIwZC1lMDVjN2M5Yzc2OTgiLCJqdGkiOiIxOTQwZTE0NWZhODlmZjQzZDNkMzlmNWVhNmM4N2U5OTdjNDFmMTIzNTA0Mzg3MDFmNWNiZTQ1MjhiOTI2NTFmYTAxZTY0YTA3ZTQ0ZTRhZiIsImlhdCI6MTY2MDgzNTQzNC44Njc1MjMsIm5iZiI6MTY2MDgzNTQzNC44Njc1MjUsImV4cCI6MTY5MjM3MTQzNC44NDc5Miwic3ViIjoiMSIsInNjb3BlcyI6W119.djR66VMBVrsytihb9lvFeIzbtFRZObLMRzcQmOolCYUj4OtqQRY6m81LGAYQRkJ2MBfYOfZUQ5j9xyUPZ7UY9fk9eW26okUS_WOWAXq5DLww5aQHnSoHBPiL6xM_0JZil5LvUmAZ7L-5tDrYS0arbRF3_UJ_k-3ir1A4zawggJEBDj27H_P7uZIUbqxJpY4OpN0wcPnAUMBxc0B_jtzEJAHoNbAVlBX66gLYhWiOWvKwBpcggKeQBSt42m0nW06pjRDdrscEI38b3MEIMneo59MZVVn3TYdM7VkAGh0BXc_eI_RN7KWPj7MeQ3EEUgUwRdLbzJQL7V5kjWbPygQNA1NQrsh0QHTKcMCN6jXy-nSBBY8zrbfz5eIFJeWBTFi3QwF4NYePmqtecigiIyQVZyuL_gcQLMMHsTBEWovTEBbMeyKWCU3eGr5iRfm6Wuahv4q6_S6ywcR1Gm4_3VxEetmy8br5heKC7THd_C2H2QaHb4hiPf4ifNTsi8DnbD6SKBPv0FjnzIizySKwdVNgOritmYrNwobP8dYudK0zKIZ3xQUm7Yc4vQ0YoPMylGoEfqeyC0cWwb9Na5KKTeHSpuNQlsnlnksLij9tRNjPw5cVtLAyWrTBEWk8-LT0MUMaUpILza9H1LHxmXP0-TdKfNXoV3P_5zPOIeB4Q6nZWe8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NUMOPERACION\":\"1\",\r\n    \"ID\":\"2a5a9661-38f9-11ed-aed0-040300000000\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{env}}/api/Api_AdSisUs/Usuariosindex",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"Api_AdSisUs",
+						"Usuariosindex"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
