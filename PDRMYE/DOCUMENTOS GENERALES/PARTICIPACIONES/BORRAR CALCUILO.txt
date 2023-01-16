@@ -1,0 +1,36 @@
+
+
+
+DELETE FROM PDRMYE.CalculoAjuste
+WHERE idCalculo IN (
+SELECT id 
+FROM PDRMYE.CalculoPrincipal
+WHERE ClaveFondo='da89175f-2b0d-11ed-afdb-040300000000'
+);
+
+
+-- eliminamos el detalle
+DELETE FROM PDRMYE.CalculoTotalDetalle
+WHERE idCalculoTotal IN (
+SELECT id 
+FROM PDRMYE.CalculoPrincipal
+WHERE ClaveFondo='da89175f-2b0d-11ed-afdb-040300000000'
+);
+
+-- eliminamos el historial
+
+DELETE FROM PDRMYE.CalculoPrincipalHis
+WHERE idCalculo IN (
+SELECT id 
+FROM PDRMYE.CalculoPrincipal
+WHERE ClaveFondo='da89175f-2b0d-11ed-afdb-040300000000'
+)
+;
+
+DELETE FROM PDRMYE.CalculoPrincipal
+WHERE id IN (
+SELECT id 
+FROM PDRMYE.CalculoPrincipal
+WHERE ClaveFondo='da89175f-2b0d-11ed-afdb-040300000000'
+);
+
