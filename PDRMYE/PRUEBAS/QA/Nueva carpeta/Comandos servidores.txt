@@ -1,0 +1,25 @@
+/******************************
+****** Horario Centos 7 *******
+******************************/
+
+>yum install ntp
+>sudo yum install chrony
+>timedatectl set-timezone America/Monterrey
+>sudo timedatectl set-ntp true
+>systemctl enable ntpd
+>systemctl start ntpd
+>timedatectl
+
+
+/******************************
+******** info sistema *********
+******************************/
+
+# consultar FS
+
+df -h .
+df -h .
+
+# listar las especificaciones del servidor
+
+lshw

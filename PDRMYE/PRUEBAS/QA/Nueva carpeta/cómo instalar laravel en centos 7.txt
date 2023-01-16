@@ -1,0 +1,169 @@
+# cómo instalar laravel en Centos7
+
+
+https://operavps.com/how-to-install-laravel-on-centos-7/
+
+# cambiar el paso 1 - ADJUST YUM REPOSITORY SETTING, la url que marca en la página, ya no existe
+#First of all, we need to add REMI and EPEL rpm repositories to the Centos system. These containers have updated packages.
+#Connect to VPS with Putty and run the below command:
+
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm
+
+
+
+#cuanod vayamos en el paso de clonar el repo desde GitHub, hay qu ehacer una configuración extra, nos toparemos con el siguiente mensaje
+
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'http://github.com/JJREYES30/Api_AdSisUs.git/'
+
+# Crear token de acceso personal en GitHub
+https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal
+
+# configurar token personal para solucionar el problema ...
+# * como recomendación hay que tomar en cuenta tener creada una cuenta de github de la SFyTGE para hacer los siguientes pasos, en QA, dejé mi cuenta*
+
+
+#token para QA
+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
+
+# Ahora siga el siguiente método basado en su máquina:
+
+
+# Para un sistema operativo basado en Linux 
+# Para Linux, debe configurar el cliente GIT local con un nombre de usuario y una dirección de correo electrónico,
+
+
+git config --global user.name "JJREYES30"
+git config --global user.email "jjreyes@cecapmex.com"
+git config -l
+
+git clone https://github.com/JJREYES30/Api_AdSisUs.git
+# > Cloning into `YOUR-REPOSITORY`...
+# Username: 
+JJREYES30
+
+# Password: 
+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
+
+
+git checkout develop
+
+git status
+
+
+cd /var/www/Api_AdSisUs
+
+
+git clone https://github.com/aagarcia25/pdrmye.git
+# > Cloning into `YOUR-REPOSITORY`...
+# Username: 
+aagarcia25
+
+# Password: 
+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
+
+
+# clonar repositorio
+git clone https://github.com/JJREYES30/Api_AdSisUs.git
+Cloning into 'Api_AdSisUs'...
+Username for 'http://github.com': JJREYES30
+Password for 'http://JJREYES30@github.com':
+remote: Enumerating objects: 1262, done.
+remote: Counting objects: 100% (101/101), done.
+remote: Compressing objects: 100% (73/73), done.
+remote: Total 1262 (delta 54), reused 68 (delta 27), pack-reused 1161
+Receiving objects: 100% (1262/1262), 277.26 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (797/797), done.
+[root@localhost www]#
+
+[root@localhost www]# ls
+Api_AdSisUs  cgi-bin  html  SIGPA1.0
+
+
+
+# consultar versiones  Centos7
+
+# versión curl
+curl --version
+
+# version GIT
+git --version
+
+
+# version java
+java -version
+
+
+
+# versión MariaDB
+#opcion1
+mysql --version
+
+#opcion2
+mysql -V
+
+#opcion3
+mysql -u'root' -p'Cg98Z6222'
+SELECT version();
+
+SHOW VARIABLES LIKE "%version%";
+
+#opcion4
+mariadb -V
+
+#versión Composer
+composer -V
+
+#version laravel
+php artisan --version 
+
+# eliminar MariaDB  Centos7
+
+https://www.enmimaquinafunciona.com/pregunta/12407/como-desinstalar-mariadb-y-vuelva-a-instalar-mysql-instalacion-de-mysql-se-convierte-en-instalacion-de-mariadb
+
+yum remove mysql-server mysql-libs mysql-devel mysql*
+
+# recomiendo usar los siguientes pasos para volver a instalar
+
+https://computingforgeeks.com/mariadb-install-on-centos-rhel-7/
+
+
+Error de SQL (1558): Column count of mysql.proc is wrong. Expected 21, found 20. Created with MariaDB 50568, now running 100804. Please use mariadb-upgrade to fix this error
+
+# solución
+https://stackoverflow.com/questions/16177465/column-count-of-mysql-proc-is-wrong-expected-20-found-16-the-table-is-probabl
+
+# Encontrar un directorio
+https://www.hostinger.mx/tutoriales/como-usar-comando-find-locate-en-linux/
+
+find / -type d -name "logi*"
+
+# borrar archivos
+https://www.hostinger.mx/tutoriales/borrar-archivos-carpetas-linux
+
+rm: ¿borrar el fichero regular «Api_AdSisUs/.git/refs/remotes/origin/qa»? (s/n) s
+
+
+
+--------------------------
+
+
+Desplegar 
+FrontEnd	10.200.4.106
+https://github.com/aagarcia25/pdrmye.git
+
+Desplegar
+BackEnd		10.200.4.105
+https://github.com/JJREYES30/Api_AdSisUs.git
+
+#la BD se encuentra en el servidor
+BD		10.200.4.77
+
+cd /var/www/html
+
+sudo cp -rf build /var/www/html/pdrmye
+
+
+
+

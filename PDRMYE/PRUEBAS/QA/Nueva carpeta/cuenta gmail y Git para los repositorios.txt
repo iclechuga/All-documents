@@ -1,0 +1,18 @@
+# ==================================================== #
+####### cuenta gmail y Git para los repositorios #######
+# ==================================================== #
+
+
+# cuenta gmail
+soportesfytge@gmail.com
+soportesfytge.2022
+
+# clon repoGit
+# Username: 
+soportesfytge
+
+# Password: 
+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
+
+front
+http://pdrmye.com

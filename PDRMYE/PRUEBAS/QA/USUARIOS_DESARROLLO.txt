@@ -1,0 +1,17 @@
+lIGA DE TRANSPARENCIA
+http://sgi.nl.gob.mx/Transparencia_2015/DetalleConcepto.aspx?EntidadId=1004&ConceptoId=407
+
+LIGA DE DESARROLLO
+http://10.200.4.106/
+
+http://10.200.4.96:3000/
+
+
+-- ANALISTA CPH
+juanluis.jimenez / iWWaf7fpyR -> Revisa el calculo
+-- COORDINADOR CPH
+cesar.rivera / iWWaf7fpyR -> autoriza el calculo
+-- usuario administrador para roles y permisos
+Aagarcia / iWWaf7fpyR
+
+

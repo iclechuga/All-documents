@@ -1,0 +1,28 @@
+# ==================================================== #
+#######        nuevos esquemas de BD          #######
+# ==================================================== 
+
+https://www.digitalocean.com/community/tutorials/crear-un-nuevo-usuario-y-otorgarle-permisos-en-mysql-es
+
+#eliminar usuario de bd
+drop user 'PDRMYEAdmin'@'%';
+flush privileges;
+
+#crear usuario 
+CREATE USER 'TiConsulta'@'%';
+
+#crear usuario y contraseña
+CREATE USER 'TiConsulta'@'%' IDENTIFIED BY 'GU3gs6aZ495CtaT';
+
+#asignar nueva contraseña, si aplica
+ALTER USER 'TiConsulta'@'%' IDENTIFIED BY 'GU3gs6aZ495CtaT';
+ 
+#grant select
+GRANT SELECT ON TiCentral. * TO 'TiConsulta'@'%';
+
+#grant todos los privilegios
+GRANT ALL PRIVILEGES ON TiCentral. * TO 'TiAdmin'@'%';
+
+#quitar privilegios
+REVOKE GRANT OPTION ON *.* FROM 'PDRMYEAdmin'@'%'
+
