@@ -1,0 +1,82 @@
+--USUARIOS
+
+DATOS DE ACCESO
+
+usuario prueba local
+
+-- ANALISTA CPH
+juanluis.jimenez / iWWaf7fpyR
+
+-- COORDINADOR CPH
+cesar.rivera / iWWaf7fpyR
+-- DIRECTOR CPH
+mario.inguanzo / iWWaf7fpyR
+
+-- COORDINADOR DE DPCP
+alma.mendoza / iWWaf7fpyR
+
+--DAMOP
+
+analista  / veronica.cardenas / iWWaf7fpyR
+coordinador/ angel.carreon / iWWaf7fpyR
+Director   / jose.roman / iWWaf7fpyR
+
+PruebasRolPermiso
+urkhZYhh4f
+
+Aagarcia / iWWaf7fpyR
+
+USUARIO MUNICIPIOS
+PERFIL / MUNICIPIOS
+USUARIO / municipio
+Contraseña / ETWx1M7lbx
+
+
+PRESUPUESTOS
+
+
+USUARIO 5
+PERFIL / COORDINADOR 
+USUARIO / CPHAnalistaA
+Contraseña / ETWx1M7lbx
+
+
+
+
+
+
+
+
+
+
+
+
+---ISAI
+ENERO   =  2,233,919,076.56 
+FEBRERO =  3253955250 
+MARZO   =  3,253,955,250 -- NO HAY INFORMACION
+
+
+FGP MES DE ENERO=3433609640.28
+
+
+FISM     =  934463212
+FORTAMUN =  4431365720
+
+isn una ves al año
+
+
+857496581.58 
+
+
+
+600- luz
+
+
+
+--articulos 
+857496581.58   --F1
+1270773990     --F2
+37442872.31    --F3
+
+
