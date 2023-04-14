@@ -1,0 +1,14 @@
+Acta KickOff
+Objeto y Proyección del alcance funcional
+Generalidades Técnicas
+Acta constitución
+Documentación técnica del proyecto
+Documento levantamiento información
+Carta cierre Sprint
+Historias de usuario
+Maquetas
+Minutas
+Guías funcionales
+Matriz de prueba
+Manual de uso de operación
+Diccionario de datos
