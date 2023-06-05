@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "05c28cc7-a1eb-42e1-9a71-d2678dbfffb2",
+		"name": "SIREAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "validapresupuesto DESAROLLO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"anio\":2023,\r\n    \"clasificador1\":\"311113220100000\",\r\n    \"clasificador2\":\"422\",\r\n    \"clasificador3\":\"22NU11100\",\r\n    \"clasificador4\":\"81302\",\r\n    \"clasificador5\":\"5\",\r\n    \"clasificador6\":\"15\",\r\n    \"clasificador7\":\"28C00304\",\r\n    \"clasificador8\":\"23\",\r\n    \"clasificador9\":\"00\",\r\n    \"clasificador10\":\"02\",\r\n    \"clasificador11\":\"523000101\",\r\n    \"mes\":\"Enero\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.200.4.105:92/api/ApiSire/ConsultaPresupuesto",
+					"protocol": "http",
+					"host": [
+						"10",
+						"200",
+						"4",
+						"105"
+					],
+					"port": "92",
+					"path": [
+						"api",
+						"ApiSire",
+						"ConsultaPresupuesto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validapresupuesto Local",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"anio\":2023,\r\n    \"clasificador1\":\"311113220100000\",\r\n    \"clasificador2\":\"422\",\r\n    \"clasificador3\":\"22NU11100\",\r\n    \"clasificador4\":\"81302\",\r\n    \"clasificador5\":\"5\",\r\n    \"clasificador6\":\"15\",\r\n    \"clasificador7\":\"28C00304\",\r\n    \"clasificador8\":\"23\",\r\n    \"clasificador9\":\"00\",\r\n    \"clasificador10\":\"01\",\r\n    \"clasificador11\":\"523000101\",\r\n    \"mes\":\"Enero\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.200.20.132:8000/api/ApiSire/ConsultaPresupuesto",
+					"protocol": "http",
+					"host": [
+						"10",
+						"200",
+						"20",
+						"132"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ApiSire",
+						"ConsultaPresupuesto"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
