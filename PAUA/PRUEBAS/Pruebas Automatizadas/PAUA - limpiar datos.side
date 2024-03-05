@@ -1,0 +1,236 @@
+{
+  "id": "6832ffe3-f636-4551-b683-27dfd9ea9d8f",
+  "version": "2.0",
+  "name": "PAUA",
+  "url": "http://10.200.4.165",
+  "tests": [{
+    "id": "60dff5d4-a665-41fa-a9f6-6f4d09e1f30d",
+    "name": "LIMPIAR DATOS",
+    "commands": [{
+      "id": "16e41005-d31a-4e71-9062-419b68cd61ba",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2c9fb8c-a5ae-4ca8-9d84-206436b4bf47",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1176",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef66df68-cadd-420c-8b8b-99e4e4dd50a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=usrPlaceholder",
+      "targets": [
+        ["id=usrPlaceholder", "id"],
+        ["css=#usrPlaceholder", "css:finder"],
+        ["xpath=//input[@id='usrPlaceholder']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/div/div/div/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23531e0e-5264-4ce2-ac0c-93f42a1b950c",
+      "comment": "",
+      "command": "type",
+      "target": "id=usrPlaceholder",
+      "targets": [
+        ["id=usrPlaceholder", "id"],
+        ["css=#usrPlaceholder", "css:finder"],
+        ["xpath=//input[@id='usrPlaceholder']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/div/div/div/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "disrec"
+    }, {
+      "id": "3266af7c-494a-48be-b248-995c82eb213e",
+      "comment": "",
+      "command": "type",
+      "target": "id=pswPlaceholder",
+      "targets": [
+        ["id=pswPlaceholder", "id"],
+        ["css=#pswPlaceholder", "css:finder"],
+        ["xpath=//input[@id='pswPlaceholder']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/div/div/div/div[5]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/input", "xpath:position"]
+      ],
+      "value": "infinite2"
+    }, {
+      "id": "20b56082-ef52-4d2c-b552-a256fe7fc512",
+      "comment": "",
+      "command": "click",
+      "target": "css=.AceptarAppLogin",
+      "targets": [
+        ["css=.AceptarAppLogin", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/div/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e59302fb-6644-4f59-ad82-f8f3a8291e2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiTypography-root:nth-child(2)",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiTypography-root:nth-child(2)", "css:finder"],
+        ["xpath=//h5[2]", "xpath:position"],
+        ["xpath=//h5[contains(.,'Plataforma que concentra la gestión tanto de usuarios como de accesos a las diversas aplicaciones; permitirá la administración, autorización o denegación del acceso a usuarios y las aplicaciones activas.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f7045ea-4064-4465-88f9-f51e03579a82",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9fde784-08c2-451d-b945-8f8e83a868c3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiButtonBase-root:nth-child(2) > .MuiTypography-root",
+      "targets": [
+        ["css=.MuiButtonBase-root:nth-child(2) > .MuiTypography-root", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div[2]/div[2]/button[2]/p", "xpath:idRelative"],
+        ["xpath=//button[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Registrar Usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed81692c-e0c5-44bb-a27f-43b60a170828",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiButtonBase-root:nth-child(2) > .MuiTypography-root",
+      "targets": [
+        ["css=.MuiButtonBase-root:nth-child(2) > .MuiTypography-root", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div[2]/div[2]/button[2]/p", "xpath:idRelative"],
+        ["xpath=//button[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Registrar Usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bd0d548-44a3-4ebc-bc8f-06248938bf7e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.MuiButtonBase-root:nth-child(2) > .MuiTypography-root",
+      "targets": [
+        ["css=.MuiButtonBase-root:nth-child(2) > .MuiTypography-root", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/div/div[2]/div[2]/button[2]/p", "xpath:idRelative"],
+        ["xpath=//button[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Registrar Usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50cc5c3f-6893-4eab-a9fb-b997b6d6ae47",
+      "comment": "",
+      "command": "click",
+      "target": "id=:r3g:",
+      "targets": [
+        ["id=:r3g:", "id"],
+        ["css=#\\3Ar3g\\3A", "css:finder"],
+        ["xpath=//input[@id=':r3g:']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8b33b3e-0eff-4168-9be1-5eee03a78b15",
+      "comment": "",
+      "command": "type",
+      "target": "id=:r34:",
+      "targets": [
+        ["id=:r34:", "id"],
+        ["css=#\\3Ar34\\3A", "css:finder"],
+        ["xpath=//input[@id=':r34:']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "PRUEBA@PRUEBA1.COM"
+    }, {
+      "id": "808791fa-50fc-444b-92a0-829705413ad8",
+      "comment": "",
+      "command": "click",
+      "target": "id=:r3h:",
+      "targets": [
+        ["id=:r3h:", "id"],
+        ["css=#\\3Ar3h\\3A", "css:finder"],
+        ["xpath=//input[@id=':r3h:']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ce07a2b-b19e-423f-9c52-dde1d8f643ec",
+      "comment": "",
+      "command": "type",
+      "target": "id=:r35:",
+      "targets": [
+        ["id=:r35:", "id"],
+        ["css=#\\3Ar35\\3A", "css:finder"],
+        ["xpath=//input[@id=':r35:']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "PTEST1"
+    }, {
+      "id": "2f56191b-9789-4f10-abe0-9150a82e42e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-wv4due",
+      "targets": [
+        ["css=.css-wv4due", "css:finder"],
+        ["xpath=(//button[@type='button'])[106]", "xpath:attributes"],
+        ["xpath=//div[15]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Limpiar Datos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6646123-968b-4eb7-84b5-f9782093acd3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-hi9g5g",
+      "targets": [
+        ["css=.css-hi9g5g", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5674caa-e61e-4d39-9f30-1a9cc952bec9",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.css-hi9g5g",
+      "targets": [
+        ["css=.css-hi9g5g", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7307a5c-9a9e-4e1d-85f6-90ac018ffa88",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-hi9g5g > path",
+      "targets": [
+        ["css=.css-hi9g5g > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "24c92b78-6341-4bab-af1a-6cb81a4e0397",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-hi9g5g > path",
+      "targets": [
+        ["css=.css-hi9g5g > path", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a5e1a3be-7f9c-4400-ac8c-b69af725449c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["60dff5d4-a665-41fa-a9f6-6f4d09e1f30d"]
+  }],
+  "urls": ["http://10.200.4.165/"],
+  "plugins": []
+}
